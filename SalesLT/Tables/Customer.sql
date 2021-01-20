@@ -12,6 +12,7 @@
     [Phone]        [dbo].[Phone]     NULL,
     [PasswordHash] VARCHAR (128)     NOT NULL,
     [PasswordSalt] VARCHAR (10)      NOT NULL,
+    [PasswordSalt1] VARCHAR (10)      NOT NULL,
     [rowguid]      UNIQUEIDENTIFIER  CONSTRAINT [DF_Customer_rowguid] DEFAULT (newid()) NOT NULL,
     [ModifiedDate] DATETIME          CONSTRAINT [DF_Customer_ModifiedDate] DEFAULT (getdate()) NOT NULL,
     CONSTRAINT [PK_Customer_CustomerID] PRIMARY KEY CLUSTERED ([CustomerID] ASC),
