@@ -9,7 +9,8 @@
     [rowguid]       UNIQUEIDENTIFIER CONSTRAINT [DF_Address_rowguid] DEFAULT (newid()) NOT NULL,
     [ModifiedDate]  DATETIME         CONSTRAINT [DF_Address_ModifiedDate] DEFAULT (getdate()) NOT NULL,
     [NewColumn1] NVARCHAR(50) NOT NULL, 
-    [NewColumn2] NVARCHAR(50) NOT NULL, 
+    [NewColumn2] NVARCHAR(50) NOT NULL,
+    [NewColumn3] NVARCHAR(50) NOT NULL,
     CONSTRAINT [PK_Address_AddressID] PRIMARY KEY CLUSTERED ([AddressID] ASC),
     CONSTRAINT [AK_Address_rowguid] UNIQUE NONCLUSTERED ([rowguid] ASC)
 );
